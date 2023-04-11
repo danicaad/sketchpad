@@ -1,13 +1,17 @@
-function generateGrid(n) {
+function generateGrid(n) {    
     for (let i = 0; i < (n*n); i++) {
         const box = document.createElement('div');
         box.classList.add("box");
         box.style.width = `${530/n}px`;
-        box.style.height = `${530/n}px`;
+        box.style.height = `${530/n}px`;        
         div.appendChild(box);
      }
 
     const boxes = document.querySelectorAll('.box');
+
+    boxes.forEach((box) => box.addEventListener("mousedown", () => {
+        box.classList.add("hovered");
+    }));
     boxes.forEach((box) => box.addEventListener("mouseover", draw));
 
     clear.addEventListener("click", () => {
@@ -16,14 +20,17 @@ function generateGrid(n) {
 }
     
 function draw(e) {
-    if(isMouseDown) {
+    if(isMouseDown && e.type == "mouseover") {
         e.target.classList.add("hovered");
     }
 }
 
 let isMouseDown = false;
 document.getElementById("container").onmousedown = () => isMouseDown = true;
-document.getElementById("container").onmouseup = () => isMouseDown = false;
+document.body.onmouseup = () => isMouseDown = false;
+document.body.addEventListener("dragstart", (event) => {
+    event.preventDefault();
+});
 
 const div = document.querySelector('#container');
 const input = document.querySelector('#input');
