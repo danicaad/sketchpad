@@ -1,2 +1,2 @@
 # sketchpad
-A simple sketchpad project that runs on a computer browser.
+A simple sketchpad project that runs on a desktop browser.
