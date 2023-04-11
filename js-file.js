@@ -6,15 +6,28 @@ function generateGrid(n) {
         box.style.height = `${530/n}px`;
         div.appendChild(box);
      }
-    const boxes = document.querySelectorAll('.box');
 
-    boxes.forEach((box) => box.addEventListener("mouseover", () => {
-        box.classList.add("hovered");
-    }));
+    const boxes = document.querySelectorAll('.box');
+    boxes.forEach((box) => box.addEventListener("mouseover", draw));
+
+    clear.addEventListener("click", () => {
+        boxes.forEach((box) => box.classList.remove("hovered"));
+    });
 }
+    
+function draw(e) {
+    if(isMouseDown) {
+        e.target.classList.add("hovered");
+    }
+}
+
+let isMouseDown = false;
+document.getElementById("container").onmousedown = () => isMouseDown = true;
+document.getElementById("container").onmouseup = () => isMouseDown = false;
 
 const div = document.querySelector('#container');
 const input = document.querySelector('#input');
+const clear = document.querySelector('#clear');
 
 let n = 16;
 
