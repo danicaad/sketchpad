@@ -20,13 +20,13 @@ body {
 }
 
 #main-container {
-display: flex;
-flex-flow: column wrap;
-align-items: center;
-background-color: #EAC7C7;
-padding: 10px;
-border-radius: 5px;
-box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background-color: #EAC7C7;
+    padding: 20px;
+    border-radius: 5px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 }
 
 #container {
@@ -49,13 +49,16 @@ box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
 
 }
 
-.hovered {
-    background-color: #A0C3D2;
-}
-
 #reset {
     margin: 20px;
     font-size: 20px;
+}
+
+.button-column {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-width: 175px;
 }
 
 button {
@@ -63,8 +66,10 @@ button {
     color: #583a3a;
     border-radius: 4px;
     border: 1px solid #A0C3D2;
-    margin: 30px;
+    margin-bottom: 40px;
+    margin-right: 20px;
     font-size: 20px;
+    box-shadow: 2px 2px 4px #79929c;
 }
 
 button:hover {
