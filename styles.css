@@ -1,6 +1,6 @@
 * {
     box-sizing: border-box;
-    font-family: "Saira Stencil One";
+    font-family: "Saira Stencil One", sans-serif;
 }
 
 body {
@@ -12,10 +12,13 @@ body {
     min-height: 100vh;
     text-shadow: 4px 4px 4px #d4cece;
     font-size: 30px;
+    background-color: rgb(255, 251, 233);
 }
 
 #title {
-    margin: 0;
+    font-family: "Press Start 2P", sans-serif;
+    font-size: 40px;
+    margin: 100px 0 40px 0;
     color: #9E7676;
 }
 
@@ -23,7 +26,7 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    background-color: #EAC7C7;
+    background-color: #e7adad;
     padding: 20px;
     border-radius: 5px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -62,17 +65,44 @@ body {
 }
 
 button {
-    background-color: #A0C3D2;
+    background-color: #c0e2dd;
     color: #583a3a;
     border-radius: 4px;
     border: 1px solid #A0C3D2;
     margin-bottom: 40px;
     margin-right: 20px;
     font-size: 20px;
-    box-shadow: 2px 2px 4px #79929c;
+    box-shadow: 2px 2px 4px #96adb6;
 }
 
 button:hover {
     background-color: #e7f2f7;
     color: #9E7676;
+}
+
+footer{
+    color: #6e4e4e;
+    font-size: 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-top: auto;
+    background-color: rgb(227, 202, 165);
+    height: 70px;
+    width: 100%;
+}
+
+#account-link {
+    margin-left:15px;
+    text-decoration: none;
+    color: #6e4e4e;
+}
+
+a:visited {
+    color: #6e4e4e;
+}
+
+a:hover {
+    transform: scale(1.2);
+    text-shadow: 4px 4px 2px #e4d9d9;
 }
