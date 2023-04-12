@@ -49,6 +49,7 @@ body {
     border: 1px solid #EAE0DA;
     background-color: #F7F5EB;
     border-radius: 2px;
+    cursor: crosshair;
 
 }
 
@@ -73,6 +74,7 @@ button {
     margin-right: 20px;
     font-size: 20px;
     box-shadow: 2px 2px 4px #96adb6;
+    cursor: pointer;
 }
 
 button:hover {
